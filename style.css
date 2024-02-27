@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Lilita+One&display=swap');
 
 :root {
-    --roxo: #9195F6;
-    --lilas: #B7C9F2;
+    --lilas: #aaacd6;
+    --branco: #fcfcfd;
     --amarelo: #F9F07A;
     --rosa: #FB88B4;
     --font-titulo: "Lilita One", sans-serif;
@@ -10,5 +10,17 @@
 }
 
 body {
-    background-color: var(--roxo);
+    background-color: var(--lilas);
+    color: var(--branco);
+    font-family: var(--font-texto);
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
