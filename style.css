@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Lilita+One&display=swap');
 
 :root {
-    --lilas: #aaacd6;
+    --lilas:#be9eff;
+    --rosa-es: #df2d7a;
+    --rosa-esc: #ff79b8;
     --branco: #fcfcfd;
-    --amarelo: #F9F07A;
-    --rosa: #FB88B4;
+    --rosa: #fa77a9;
     --font-titulo: "Lilita One", sans-serif;
     --font-texto: "Chau Philomene One", sans-serif;
 }
 
 body {
-    background-color: var(--lilas);
+    background-color: var(--rosa);
     color: var(--branco);
     font-family: var(--font-texto);
 }
@@ -23,4 +24,59 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+
+.titulo-principal span {
+    color: var(--rosa-es);
+}
+
+.botao {
+    font-family: var(--font-texto);
+    font-size: 18px;
+    background-color: var(--rosa-esc);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 4px solid var(--rosa-es);
+    border-left: 4px solid var(--rosa-es);
+    border-right: 4px solid var(--rosa-es);
+    border-top: none;
+}
+
+.botoes {
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+}
+
+.ativo{
+    background-color: var(--lilas);
+    border-bottom: 4px solid var(--branco) ;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
 }
