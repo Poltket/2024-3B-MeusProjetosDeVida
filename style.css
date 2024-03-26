@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Lilita+One&display=swap');
 
 :root {
+    --preto: #000000;
     --lilas:#be9eff;
-    --rosa-es: #df2d7a;
-    --rosa-esc: #ff79b8;
+    --rosa-es: #6340a6;
+    --rosa-esc: #e979ff;
     --branco: #fcfcfd;
-    --rosa: #fa77a9;
+    --rosa: #54127a;
     --font-titulo: "Lilita One", sans-serif;
     --font-texto: "Chau Philomene One", sans-serif;
 }
@@ -64,9 +65,34 @@ body {
     border-radius: 0 0 40px 40px;
 }
 
-.ativo{
+.botao.ativo{
     background-color: var(--lilas);
     border-bottom: 4px solid var(--branco) ;
+}
+
+.abas-textos{
+    background-color: var(--rosa-es);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display: block;
+}
+
+.aba-conteudo{
+    display: none;
+}
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color:var(--preto) ;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
