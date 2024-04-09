@@ -1,18 +1,20 @@
+
 const botoes = document.querySelectorAll('.botao');
-const textos = document.querySelectorAll('.aba-conteudo');
+const textos = document.querySelectorAll('.aba-conteudo')
 
-const contadores = document.querySelector('.contador');
+const contadores = document.querySelectorAll('.contador')
 
-const tempoObjetivo01 = new Date("2024-04-08T00:00:00");
-const tempoObjetivo02 = new Date("2024-11-30T00:00:00");
-const tempoObjetivo03 = new Date("2025-03-01T00:00:00");
-const tempoObjetivo04 = new Date("2025-03-25T00:00:00");
+const tempoObjetivo01 = new Date("2024-04-03T00:00:00")
+const tempoObjetivo02 = new Date("2024-06-25T00:00:00")
+const tempoObjetivo03 = new Date("2024-07-15T00:00:00")
+const tempoObjetivo04 = new Date("2024-07-06T00:00:00")
 
 const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04];
 
-for (let i= 0; i<tempos.length; i ++){
-    contadores[i].textContent = calculaTempo (tempos[i])
+for (let i= 0; i<tempos.length; i++){
+    contadores[i].textContent = calculaTempo(tempos[i])
 }
+
 
 for(let i= 0; i<botoes.length; i++){
     botoes[i].onclick = function (){
@@ -20,7 +22,6 @@ for(let i= 0; i<botoes.length; i++){
         for(j=0; j<botoes.length; j++){
             botoes[j].classList.remove('ativo')
             textos[j].classList.remove('ativo')
-
         }
 
         botoes[i].classList.add('ativo')
@@ -28,10 +29,10 @@ for(let i= 0; i<botoes.length; i++){
     } 
 }
 
-function calculaTempo(tempoObjetivo) {
+function calculaTempo (tempoObjetivo) {
 
-    let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual;
+    let tempoAtual = new Date()
+    let tempoFinal = tempoObjetivo - tempoAtual
 
     let segundos = Math.floor(tempoFinal/1000);
     let minutos = Math.floor(segundos/60);
@@ -42,6 +43,6 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
 
-    return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos ";
+    return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos "
 
 }
